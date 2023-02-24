@@ -1,0 +1,476 @@
+{
+  "unpublishedPage": {
+    "name": "Agent_Report",
+    "slug": "agent-report",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1056,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 720,
+          "containerStyle": "none",
+          "snapRows": 57,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 69,
+          "minHeight": 810,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Container1",
+              "borderColor": "transparent",
+              "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "displayName": "Container",
+              "iconSVG": "/static/media/icon.1977dca3.svg",
+              "topRow": 0,
+              "bottomRow": 70,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 11.40625,
+              "leftColumn": 0,
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 690,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "isVisibleDownload": true,
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 5,
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET",
+                      "animateLoading": true,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.agent_status.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.agent_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.agent_name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.area_zone.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.number_of_tickets.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.work_minutes.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.work_minutes.cellBackground"
+                        },
+                        {
+                          "key": "primaryColumns.last_closed_time.computedValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "primaryColumns.working_hours.computedValue"
+                        }
+                      ],
+                      "leftColumn": 1,
+                      "delimiter": ",",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "isVisible": true,
+                      "enableClientSideSearch": true,
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "isLoading": false,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "agent_id": 86,
+                        "agent_status": 105
+                      },
+                      "widgetName": "Table1",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "agent_status",
+                        "agent_id",
+                        "agent_name",
+                        "area_zone",
+                        "number_of_tickets",
+                        "work_minutes",
+                        "last_closed_time",
+                        "working_hours"
+                      ],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "primaryColumns.work_minutes.cellBackground"
+                        }
+                      ],
+                      "compactMode": "SHORT",
+                      "displayName": "Table",
+                      "bottomRow": 67,
+                      "parentRowSpace": 10,
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "parentColumnSpace": 11.09375,
+                      "dynamicTriggerPathList": [],
+                      "primaryColumns": {
+                        "agent_status": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "agent_status",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "agent_status",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.agent_status))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "agent_id": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "agent_id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "agent_id",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.agent_id))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "agent_name": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "agent_name",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "agent_name",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.agent_name))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "area_zone": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "area_zone",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "area_zone",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.area_zone))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "number_of_tickets": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "number_of_tickets",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "number_of_tickets",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.number_of_tickets))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "work_minutes": {
+                          "index": 5,
+                          "width": 150,
+                          "id": "work_minutes",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "work_minutes",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.work_minutes))}}",
+                          "cellBackground": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.work_minutes>60?'#DD4B34':currentRow.work_minutes>30?'#FFC13D':'#FFFFFF'))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "last_closed_time": {
+                          "index": 6,
+                          "width": 150,
+                          "id": "last_closed_time",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "last_closed_time",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.last_closed_time))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "working_hours": {
+                          "index": 7,
+                          "width": 150,
+                          "id": "working_hours",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "working_hours",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.working_hours))}}",
+                          "cellBackground": ""
+                        }
+                      },
+                      "key": "njlr8je770",
+                      "derivedColumns": {},
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textSize": "0.875rem",
+                      "widgetId": "ets4wzx574",
+                      "tableData": "{{agent_status.data}}",
+                      "label": "Data",
+                      "searchKey": "",
+                      "parentId": "z5dru3ftt3",
+                      "renderMode": "CANVAS",
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text1",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 11.09375,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [],
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "Agent Status",
+                      "key": "jbqnp288nj",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 44,
+                      "disableLink": false,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "0fwckjvc7p",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "z5dru3ftt3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.875rem",
+                      "minDynamicHeight": 4
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Button1",
+                      "onClick": "{{agent_status.run()}}",
+                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 11.09375,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 52,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "buttonColor"
+                        }
+                      ],
+                      "text": "Refresh",
+                      "isDisabled": false,
+                      "key": "qds51z3ipl",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "5mq8yx7und",
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "z5dru3ftt3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "buttonVariant": "PRIMARY",
+                      "placement": "CENTER"
+                    }
+                  ],
+                  "key": "5wix8m52eo",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 273.75,
+                  "detachFromLayout": true,
+                  "widgetId": "z5dru3ftt3",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "0rj27bj03d",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "borderWidth": "0",
+              "key": "jov7c73m2w",
+              "labelTextSize": "0.875rem",
+              "backgroundColor": "#FFFFFF",
+              "rightColumn": 64,
+              "dynamicHeight": "FIXED",
+              "widgetId": "0rj27bj03d",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Agent_Report_agent_status",
+              "name": "agent_status",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Agent_Report",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "620e33872919fc0bd80f5165_620e48cd2919fc0bd80f5172"
+}

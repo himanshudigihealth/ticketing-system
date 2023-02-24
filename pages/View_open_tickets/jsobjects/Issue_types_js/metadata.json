@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "Issue_types_js",
+    "pageId": "View_open_tickets",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "View_open_tickets_Issue_types_js",
+  "deleted": false,
+  "gitSyncId": "620e33872919fc0bd80f5165_62138c672919fc0bd80f51a7"
+}
