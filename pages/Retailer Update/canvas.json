@@ -3509,15 +3509,76 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
-        "layoutOnLoadActionErrors": [
-          {
-            "code": 4041,
-            "message": "Cyclical dependency error encountered while parsing relationship [amc : amc.text] where the relationship is denoted as (source : target).",
-            "errorType": "A cyclic dependency error has been encountered on current page, \nqueries on page load will not run. \n Please check debugger and Appsmith documentation for more information"
-          }
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Retailer Update_Resolution_type_drop",
+              "name": "Resolution_type_drop",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Retailer Update_retailer_data",
+              "name": "retailer_data",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "retailer_code_select.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Retailer Update_Agent_update_names",
+              "name": "Agent_update_names",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Retailer Update_RETAILER_update",
+              "name": "RETAILER_update",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "retailer_code_select.filterText?retailer_code_select.filterText:'%'"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Retailer Update_retailer_payment_details_query",
+              "name": "retailer_payment_details_query",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "retailer_code_select.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Retailer Update_smsSummary",
+              "name": "smsSummary",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "retailer_code_select.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
         ],
-        "validOnPageLoadActions": false,
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
         "id": "Retailer Update",
         "deleted": false,
         "policies": [],

@@ -5926,15 +5926,94 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
-        "layoutOnLoadActionErrors": [
-          {
-            "code": 4041,
-            "message": "Cyclical dependency error encountered while parsing relationship [Issue_types_js.myFun1.actionConfiguration : Issue_types_js.myFun1] where the relationship is denoted as (source : target).",
-            "errorType": "A cyclic dependency error has been encountered on current page, \nqueries on page load will not run. \n Please check debugger and Appsmith documentation for more information"
-          }
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "View_open_tickets_Issues_type",
+              "name": "Issues_type",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "View_open_tickets_Resolution_types",
+              "name": "Resolution_types",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "View_open_tickets_ASSIGNED_COUNT",
+              "name": "ASSIGNED_COUNT",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "AGENT_NOTIFY.selectedOptionValue?AGENT_NOTIFY.selectedOptionValue:0"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "View_open_tickets_agent_names",
+              "name": "agent_names",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "View_open_tickets_get_whatsapp_team",
+              "name": "get_whatsapp_team",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "View_open_tickets_ticket_status",
+              "name": "ticket_status",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 100000
+            }
+          ],
+          [
+            {
+              "id": "View_open_tickets_retailer_payment_details_query",
+              "name": "retailer_payment_details_query",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "status_table.triggeredRow.retailer_id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "View_open_tickets_get_agent_id",
+              "name": "get_agent_id",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
         ],
-        "validOnPageLoadActions": false,
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
         "id": "View_open_tickets",
         "deleted": false,
         "policies": [],

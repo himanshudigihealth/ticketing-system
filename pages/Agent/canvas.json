@@ -1607,20 +1607,18 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Agent_AGENT_STATUS",
-              "name": "AGENT_STATUS",
+              "id": "Agent_AGENT_NAMES",
+              "name": "AGENT_NAMES",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.user.email"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Agent_AGENT_NAMES",
-              "name": "AGENT_NAMES",
+              "id": "Agent_AGENT_STATUS",
+              "name": "AGENT_STATUS",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [

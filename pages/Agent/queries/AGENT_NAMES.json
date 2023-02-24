@@ -38,7 +38,7 @@
     "jsonPathKeys": [
       "appsmith.user.email"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
