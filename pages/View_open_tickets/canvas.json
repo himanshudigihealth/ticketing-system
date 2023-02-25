@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 890,
+          "bottomRow": 810,
           "containerStyle": "none",
           "snapRows": 50,
           "parentRowSpace": 1,
@@ -53,7 +53,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 750,
+                  "bottomRow": 760,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -1141,7 +1141,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "Refresh",
-                      "onClick": "{{ticket_status.run(() => showAlert('Table Refresh','success'), () => {})}}",
+                      "onClick": "{{ticket_status.run(() => showAlert('Table Refresh','success'), () => {});get_agent_id.run()}}",
                       "buttonColor": "#03B365",
                       "dynamicPropertyPathList": [
                         {
@@ -2350,7 +2350,7 @@
                           "widgetName": "Canvas5",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 700,
+                          "bottomRow": 710,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -5967,6 +5967,16 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "View_open_tickets_get_agent_id",
+              "name": "get_agent_id",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "View_open_tickets_get_whatsapp_team",
               "name": "get_whatsapp_team",
               "confirmBeforeExecute": false,
@@ -5995,18 +6005,6 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "status_table.triggeredRow.retailer_id"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "View_open_tickets_get_agent_id",
-              "name": "get_agent_id",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.user.email"
               ],
               "timeoutInMillisecond": 10000
             }
